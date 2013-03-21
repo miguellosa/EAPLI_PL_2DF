@@ -11,6 +11,10 @@ package Model;
 public abstract class PayMethod {
     
     private String description;
+    
+    public PayMethod(String description){
+        this.description=description;
+    }
 
     public String getDescription() {
         return description;
@@ -19,6 +23,4 @@ public abstract class PayMethod {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
 }
