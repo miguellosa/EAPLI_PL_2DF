@@ -13,7 +13,7 @@ public abstract class PayMethod {
     private String description;
     
     public PayMethod(String description){
-        this.description=description;
+        setDescription(description);
     }
 
     public String getDescription() {
