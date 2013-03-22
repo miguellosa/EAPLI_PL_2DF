@@ -1,0 +1,11 @@
+title Registo Tipo de Despesa
+
+
+User->MainMenu:Register Expense Type
+MainMenu->RegisterExpenseTypeUI:create
+User->RegisterExpenseTypeUI: insert name
+User->RegisterExpenseTypeUI: insert description
+RegisterExpenseTypeUI->RegisterExpenseTypeController:create
+RegisterExpenseTypeUI->RegisterExpenseTypeController:registerExpenseType(name,description)
+RegisterExpenseTypeController->ExpenseType:create(name,descrition)
+RegisterExpenseTypeController->ExpenseTypeRepository:save(expensetype)
